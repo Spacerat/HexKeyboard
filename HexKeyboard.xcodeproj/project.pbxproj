@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCEB19B53C30006FF205 /* AppDelegate.swift */; };
+		D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */; };
+		D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCF019B53C30006FF205 /* ViewController.swift */; };
+		D88FCCF419B53C30006FF205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88FCCF219B53C30006FF205 /* Main.storyboard */; };
+		D88FCCF619B53C30006FF205 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88FCCF519B53C30006FF205 /* Images.xcassets */; };
+		D88FCD0219B53C30006FF205 /* HexKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D88FCCFC19B53C30006FF205 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D88FCCDE19B53C2F006FF205 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D88FCCE519B53C30006FF205;
+			remoteInfo = HexKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D88FCCE619B53C30006FF205 /* HexKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88FCCEA19B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88FCCEB19B53C30006FF205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D88FCCEE19B53C30006FF205 /* HexKeyboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HexKeyboard.xcdatamodel; sourceTree = "<group>"; };
+		D88FCCF019B53C30006FF205 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D88FCCF319B53C30006FF205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D88FCCF519B53C30006FF205 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88FCD0019B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D88FCCE319B53C30006FF205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88FCCF819B53C30006FF205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D88FCCDD19B53C2F006FF205 = {
+			isa = PBXGroup;
+			children = (
+				D88FCCE819B53C30006FF205 /* HexKeyboard */,
+				D88FCCFE19B53C30006FF205 /* HexKeyboardTests */,
+				D88FCCE719B53C30006FF205 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D88FCCE719B53C30006FF205 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D88FCCE619B53C30006FF205 /* HexKeyboard.app */,
+				D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D88FCCE819B53C30006FF205 /* HexKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D88FCCEB19B53C30006FF205 /* AppDelegate.swift */,
+				D88FCCF019B53C30006FF205 /* ViewController.swift */,
+				D88FCCF219B53C30006FF205 /* Main.storyboard */,
+				D88FCCF519B53C30006FF205 /* Images.xcassets */,
+				D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */,
+				D88FCCE919B53C30006FF205 /* Supporting Files */,
+			);
+			path = HexKeyboard;
+			sourceTree = "<group>";
+		};
+		D88FCCE919B53C30006FF205 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D88FCCEA19B53C30006FF205 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D88FCCFE19B53C30006FF205 /* HexKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */,
+				D88FCCFF19B53C30006FF205 /* Supporting Files */,
+			);
+			path = HexKeyboardTests;
+			sourceTree = "<group>";
+		};
+		D88FCCFF19B53C30006FF205 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D88FCD0019B53C30006FF205 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D88FCCE519B53C30006FF205 /* HexKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D88FCD0519B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboard" */;
+			buildPhases = (
+				D88FCCE219B53C30006FF205 /* Sources */,
+				D88FCCE319B53C30006FF205 /* Frameworks */,
+				D88FCCE419B53C30006FF205 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HexKeyboard;
+			productName = HexKeyboard;
+			productReference = D88FCCE619B53C30006FF205 /* HexKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D88FCCFA19B53C30006FF205 /* HexKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboardTests" */;
+			buildPhases = (
+				D88FCCF719B53C30006FF205 /* Sources */,
+				D88FCCF819B53C30006FF205 /* Frameworks */,
+				D88FCCF919B53C30006FF205 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D88FCCFD19B53C30006FF205 /* PBXTargetDependency */,
+			);
+			name = HexKeyboardTests;
+			productName = HexKeyboardTests;
+			productReference = D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D88FCCDE19B53C2F006FF205 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Joseph Atkins-Turkish";
+				TargetAttributes = {
+					D88FCCE519B53C30006FF205 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					D88FCCFA19B53C30006FF205 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = D88FCCE519B53C30006FF205;
+					};
+				};
+			};
+			buildConfigurationList = D88FCCE119B53C2F006FF205 /* Build configuration list for PBXProject "HexKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D88FCCDD19B53C2F006FF205;
+			productRefGroup = D88FCCE719B53C30006FF205 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D88FCCE519B53C30006FF205 /* HexKeyboard */,
+				D88FCCFA19B53C30006FF205 /* HexKeyboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D88FCCE419B53C30006FF205 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88FCCF419B53C30006FF205 /* Main.storyboard in Resources */,
+				D88FCCF619B53C30006FF205 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88FCCF919B53C30006FF205 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D88FCCE219B53C30006FF205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */,
+				D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */,
+				D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88FCCF719B53C30006FF205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88FCD0219B53C30006FF205 /* HexKeyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D88FCCFD19B53C30006FF205 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D88FCCE519B53C30006FF205 /* HexKeyboard */;
+			targetProxy = D88FCCFC19B53C30006FF205 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D88FCCF219B53C30006FF205 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D88FCCF319B53C30006FF205 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D88FCD0319B53C30006FF205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D88FCD0419B53C30006FF205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D88FCD0619B53C30006FF205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = HexKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D88FCD0719B53C30006FF205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = HexKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D88FCD0919B53C30006FF205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HexKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexKeyboard.app/HexKeyboard";
+			};
+			name = Debug;
+		};
+		D88FCD0A19B53C30006FF205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HexKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexKeyboard.app/HexKeyboard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D88FCCE119B53C2F006FF205 /* Build configuration list for PBXProject "HexKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88FCD0319B53C30006FF205 /* Debug */,
+				D88FCD0419B53C30006FF205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D88FCD0519B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88FCD0619B53C30006FF205 /* Debug */,
+				D88FCD0719B53C30006FF205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88FCD0919B53C30006FF205 /* Debug */,
+				D88FCD0A19B53C30006FF205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D88FCCEE19B53C30006FF205 /* HexKeyboard.xcdatamodel */,
+			);
+			currentVersion = D88FCCEE19B53C30006FF205 /* HexKeyboard.xcdatamodel */;
+			path = HexKeyboard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D88FCCDE19B53C2F006FF205 /* Project object */;
+}
