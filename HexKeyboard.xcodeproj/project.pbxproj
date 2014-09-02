@@ -13,6 +13,10 @@
 		D88FCCF419B53C30006FF205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88FCCF219B53C30006FF205 /* Main.storyboard */; };
 		D88FCCF619B53C30006FF205 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88FCCF519B53C30006FF205 /* Images.xcassets */; };
 		D88FCD0219B53C30006FF205 /* HexKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */; };
+		D88FCD0C19B53DE2006FF205 /* HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0B19B53DE2006FF205 /* HexViewController.swift */; };
+		D88FCD0E19B54338006FF205 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0D19B54338006FF205 /* Note.swift */; };
+		D88FCD1019B5502D006FF205 /* HexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0F19B5502D006FF205 /* HexView.swift */; };
+		D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECE68819B5E8EE00BEB576 /* HexKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FCD0019B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardTests.swift; sourceTree = "<group>"; };
+		D88FCD0B19B53DE2006FF205 /* HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexViewController.swift; sourceTree = "<group>"; };
+		D88FCD0D19B54338006FF205 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		D88FCD0F19B5502D006FF205 /* HexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexView.swift; sourceTree = "<group>"; };
+		D8ECE68819B5E8EE00BEB576 /* HexKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexKey.swift; path = ../HexKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,16 @@
 		D88FCCE819B53C30006FF205 /* HexKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D8ECE68819B5E8EE00BEB576 /* HexKey.swift */,
 				D88FCCEB19B53C30006FF205 /* AppDelegate.swift */,
 				D88FCCF019B53C30006FF205 /* ViewController.swift */,
 				D88FCCF219B53C30006FF205 /* Main.storyboard */,
 				D88FCCF519B53C30006FF205 /* Images.xcassets */,
 				D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */,
 				D88FCCE919B53C30006FF205 /* Supporting Files */,
+				D88FCD0B19B53DE2006FF205 /* HexViewController.swift */,
+				D88FCD0D19B54338006FF205 /* Note.swift */,
+				D88FCD0F19B5502D006FF205 /* HexView.swift */,
 			);
 			path = HexKeyboard;
 			sourceTree = "<group>";
@@ -211,8 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88FCD1019B5502D006FF205 /* HexView.swift in Sources */,
 				D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */,
+				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,
 				D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */,
+				D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */,
+				D88FCD0C19B53DE2006FF205 /* HexViewController.swift in Sources */,
 				D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = HexKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -343,6 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = HexKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,6 +419,7 @@
 				D88FCD0719B53C30006FF205 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +428,7 @@
 				D88FCD0A19B53C30006FF205 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
