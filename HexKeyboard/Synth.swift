@@ -16,20 +16,23 @@ protocol NotePlayer : class {
 class Synth : NotePlayer {
     let engine : AVAudioEngine
     let mixer : AVAudioMixerNode
-    let player : AVAudioPlayerNode
-    let players : [AVAudioPlayerNode]
+    let channels = 20
+    var players : [AVAudioPlayerNode]
     init() {
         engine  = AVAudioEngine()
         mixer = AVAudioMixerNode()
-        player = AVAudioPlayerNode()
-        
-//        for i in 0..<10 {
-//            players.append(<#newElement: T#>)
-//        }
+
+        self.players = [AVAudioPlayerNode]()
         engine.attachNode(mixer)
-        engine.attachNode(player)
+        for i in 0..<channels {
+            let player = AVAudioPlayerNode()
+            players.append(player)
+            engine.attachNode(player)
+            engine.connect(player, to: mixer, format: nil)
+        }
+
         engine.connect(mixer, to: engine.outputNode, format: nil)
-        engine.connect(player, to: mixer, format: nil)
+        
         var err : NSErrorPointer = nil
         engine.startAndReturnError(err)
         
@@ -38,7 +41,16 @@ class Synth : NotePlayer {
         }
     }
     
-    
+    func scheduleFirstPlayerWith(buffer buff : AVAudioPCMBuffer) {
+        
+        //if let player = players.filter({ p in return !p.playing }).first {
+        if let player = players.last {
+            player.scheduleBuffer(buff, atTime: nil, options: .Interrupts, completionHandler: nil)
+            player.play()
+            players.removeLast()
+            players.insert(player, atIndex: 0)
+        }
+    }
     
     func play(note: Note) {
 //        NSURL *pdfURL = [[NSBundle mainBundle] URLForResource:@"sampleLayout.pdf" withExtension:nil];
@@ -56,8 +68,10 @@ class Synth : NotePlayer {
             if err != nil {
                 println(err)
             }
-            player.scheduleBuffer(buff, atTime: nil, options: .Interrupts, completionHandler: nil)
-            player.play()
+
+            scheduleFirstPlayerWith(buffer: buff)
+//            player.scheduleBuffer(buff, atTime: nil, options: .Interrupts, completionHandler: nil)
+            
         }
         else {
             println("Missing file \(note.name).m4a")

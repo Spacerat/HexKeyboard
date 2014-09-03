@@ -15,7 +15,7 @@ protocol HexViewDelegate : class {
 
 class HexView: UIView {
     var columns = 9;
-    var rows = 10;
+    var rows = 5;
     weak var delegate : HexViewDelegate? {
         didSet {
             self.setLabels()
@@ -35,6 +35,7 @@ class HexView: UIView {
                 label.textAlignment = .Center
             }
         }
+        self.multipleTouchEnabled = true
         backgroundColor = UIColor.whiteColor()
     }
     
