@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Foundation
+import CoreAudio
+import AVFoundation
 
 class HexViewController: UIViewController, HexViewDelegate {
+    
+    var player : NotePlayer = Synth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         println(view.frame)
         //println(view)
-
+        
+        let k = AVAudioEngine()
 
     }
     
@@ -34,7 +40,7 @@ class HexViewController: UIViewController, HexViewDelegate {
     func hexPressed(row: Int, column: Int) {
         let note = Note(hexRow: row, column: column)
         println("\(note.index) : \(note.name)")
-        
+        player.play(note)
     }
     
     func hexNameForRow(row: Int, column: Int) -> String {

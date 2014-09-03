@@ -8,7 +8,7 @@
 
 import Foundation
 
-let NoteNames = ["A ", "Bb", "B ", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+let NoteNames = ["A", "Bb", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
 
 struct Note {
     let index:Int
