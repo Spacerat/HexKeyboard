@@ -18,6 +18,7 @@ class Synth : NotePlayer {
     let mixer : AVAudioMixerNode
     let channels = 20
     var players : [AVAudioPlayerNode]
+    var buffs : [String : AVAudioPCMBuffer]
     init() {
         engine  = AVAudioEngine()
         mixer = AVAudioMixerNode()
@@ -39,6 +40,29 @@ class Synth : NotePlayer {
         if err != nil {
             println(err)
         }
+        
+        buffs = [String:AVAudioPCMBuffer]()
+        
+        for name in map(0..<12, {Note(index: $0).name}) {
+            let bundleUrl = NSBundle.mainBundle().URLForResource("\(name)", withExtension: "m4a")
+            if let url = bundleUrl {
+                var err : NSError?
+                let file = AVAudioFile(forReading: url, error: &err)
+                if err != nil {
+                    println(err)
+                }
+                let buff = AVAudioPCMBuffer(PCMFormat: AVAudioFormat(standardFormatWithSampleRate: 44000, channels: 2), frameCapacity: 1000000)
+                
+                file.readIntoBuffer(buff, error: &err)
+                if err != nil {
+                    println(err)
+                }
+                buffs[name] = buff
+            }
+            else {
+                println("Missing file \(name).m4a")
+            }
+        }
     }
     
     func scheduleFirstPlayerWith(buffer buff : AVAudioPCMBuffer) {
@@ -54,27 +78,8 @@ class Synth : NotePlayer {
     
     func play(note: Note) {
 //        NSURL *pdfURL = [[NSBundle mainBundle] URLForResource:@"sampleLayout.pdf" withExtension:nil];
-        
-        let bundleUrl = NSBundle.mainBundle().URLForResource("\(note.name)", withExtension: "m4a")
-        if let url = bundleUrl {
-            var err : NSError?
-            let file = AVAudioFile(forReading: url, error: &err)
-            if err != nil {
-                println(err)
-            }
-            let buff = AVAudioPCMBuffer(PCMFormat: AVAudioFormat(standardFormatWithSampleRate: 44000, channels: 2), frameCapacity: 1000000)
-            
-            file.readIntoBuffer(buff, error: &err)
-            if err != nil {
-                println(err)
-            }
-
+        if let buff = self.buffs[note.name] {
             scheduleFirstPlayerWith(buffer: buff)
-//            player.scheduleBuffer(buff, atTime: nil, options: .Interrupts, completionHandler: nil)
-            
-        }
-        else {
-            println("Missing file \(note.name).m4a")
         }
     }
 }

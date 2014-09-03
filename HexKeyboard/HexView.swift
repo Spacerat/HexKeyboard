@@ -90,8 +90,9 @@ class HexView: UIView {
             let y = CGFloat(r) * hexHeight + CGFloat(c%2)*hexHeight/2.0;
             let xi = Int(x)
             let yi = Int(y)
-            hex.frame = CGRect(x: x, y: y, width: hexWidth, height: hexHeight)
-            hex.backgroundColor = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.purpleColor()][i%4]
+            hex.frame = CGRect(x: x, y: y, width: hexWidth+20, height: hexHeight+20)
+//            hex.backgroundColor = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.purpleColor()][i%4]
+            hex.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.4)
         }
     }
 }
