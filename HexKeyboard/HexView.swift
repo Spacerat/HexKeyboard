@@ -14,8 +14,8 @@ protocol HexViewDelegate : class {
 }
 
 class HexView: UIView {
-    var columns = 9;
-    var rows = 5;
+    var columns = 8;
+    var rows = 4;
     weak var delegate : HexViewDelegate? {
         didSet {
             self.setLabels()
@@ -70,11 +70,25 @@ class HexView: UIView {
             iterateHexes { (row, column, index, hex) -> () in
                 if hex.pointInside(t.locationInView(hex), withEvent: nil) {
                     self.delegate?.hexPressed(row, column: column)
+                    hex.doPressAnimation()
                 }
             }
         }
     }
 
+    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+        for touch in touches {
+            let t = touch as UITouch
+            
+            iterateHexes { (row, column, index, hex) -> () in
+                if hex.pointInside(t.locationInView(hex), withEvent: nil) && !hex.pointInside(t.previousLocationInView(hex), withEvent: nil) {
+                    self.delegate?.hexPressed(row, column: column)
+                    hex.doPressAnimation()
+                }
+            }
+        }
+    }
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -91,8 +105,6 @@ class HexView: UIView {
             let xi = Int(x)
             let yi = Int(y)
             hex.frame = CGRect(x: x, y: y, width: hexWidth+20, height: hexHeight+20)
-//            hex.backgroundColor = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.purpleColor()][i%4]
-            hex.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.4)
         }
     }
 }
