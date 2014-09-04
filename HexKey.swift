@@ -24,7 +24,7 @@ class HexKey : UILabel {
     }
     
     func doPressAnimation() {
-        self.layer.backgroundColor = UIColor(red: 100, green: 0, blue: 255, alpha: 0.4).CGColor
+        self.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4).CGColor
         UIView.animateWithDuration(0.5, animations: {
             self.layer.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
         })
