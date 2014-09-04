@@ -9,10 +9,6 @@
 import Foundation
 import AVFoundation
 
-protocol NotePlayer : class {
-    func play(note: Note);
-}
-
 class Synth : NotePlayer {
     let engine : AVAudioEngine
     let mixer : AVAudioMixerNode
@@ -66,8 +62,6 @@ class Synth : NotePlayer {
     }
     
     func scheduleFirstPlayerWith(buffer buff : AVAudioPCMBuffer) {
-        
-        //if let player = players.filter({ p in return !p.playing }).first {
         if let player = players.last {
             player.scheduleBuffer(buff, atTime: nil, options: .Interrupts, completionHandler: nil)
             player.play()
@@ -77,9 +71,10 @@ class Synth : NotePlayer {
     }
     
     func play(note: Note) {
-//        NSURL *pdfURL = [[NSBundle mainBundle] URLForResource:@"sampleLayout.pdf" withExtension:nil];
         if let buff = self.buffs[note.name] {
             scheduleFirstPlayerWith(buffer: buff)
         }
     }
 }
+
+

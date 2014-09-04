@@ -32,6 +32,7 @@
 		D8DEA98B19B6205E00CF8FCE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */; };
 		D8DEA98C19B6205E00CF8FCE /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */; };
 		D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DEA98D19B6236800CF8FCE /* Synth.swift */; };
+		D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */; };
 		D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECE68819B5E8EE00BEB576 /* HexKey.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D8DEA98D19B6236800CF8FCE /* Synth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synth.swift; sourceTree = "<group>"; };
+		D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISampler.swift; sourceTree = "<group>"; };
 		D8ECE68819B5E8EE00BEB576 /* HexKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexKey.swift; path = ../HexKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				D88FCD0D19B54338006FF205 /* Note.swift */,
 				D88FCD0F19B5502D006FF205 /* HexView.swift */,
 				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
+				D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */,
 			);
 			path = HexKeyboard;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			files = (
 				D88FCD1019B5502D006FF205 /* HexView.swift in Sources */,
 				D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */,
+				D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */,
 				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,
 				D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */,
 				D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */,

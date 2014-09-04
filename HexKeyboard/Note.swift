@@ -10,6 +10,10 @@ import Foundation
 
 let NoteNames = ["A", "Bb", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
 
+protocol NotePlayer : class {
+    func play(note: Note);
+}
+
 struct Note {
     let index:Int
     
@@ -19,7 +23,7 @@ struct Note {
     
     init(hexRow: Int, column: Int) {
         let co = Int(floor(Double(column/2.0)))
-        let note = hexRow * 5 + co + (column%2)*9 + 30
+        let note = -hexRow * 7 + co + (column%2)*(-3) + 70
         self.init(index: note)
     }
     

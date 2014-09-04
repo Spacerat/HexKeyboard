@@ -13,7 +13,7 @@ import AVFoundation
 
 class HexViewController: UIViewController, HexViewDelegate {
     
-    var player : NotePlayer = Synth()
+    var player : NotePlayer = MIDISampler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,8 @@ class HexViewController: UIViewController, HexViewDelegate {
     }
     
     func hexNameForRow(row: Int, column: Int) -> String {
-        return Note(hexRow: row, column: column).name
+        let name = Note(hexRow: row, column: column).name
+        return "\(name)"
     }
     
 }
