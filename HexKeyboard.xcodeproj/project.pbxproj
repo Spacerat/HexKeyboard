@@ -20,6 +20,7 @@
 		D838385019B6948C003D1559 /* F#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384B19B6948C003D1559 /* F#.m4a */; };
 		D838385119B6948C003D1559 /* G#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384C19B6948C003D1559 /* G#.m4a */; };
 		D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84F43EE19C5C4720081E3D1 /* defaults.plist */; };
+		D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */; };
 		D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */; };
 		D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCEB19B53C30006FF205 /* AppDelegate.swift */; };
 		D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */; };
@@ -63,6 +64,7 @@
 		D838384B19B6948C003D1559 /* F#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "F#.m4a"; path = "HexKeyboard/F#.m4a"; sourceTree = "<group>"; };
 		D838384C19B6948C003D1559 /* G#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "G#.m4a"; path = "HexKeyboard/G#.m4a"; sourceTree = "<group>"; };
 		D84F43EE19C5C4720081E3D1 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = HexKeyboard/defaults.plist; sourceTree = "<group>"; };
+		D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentSelectionViewController.swift; sourceTree = "<group>"; };
 		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
 		D88FCCE619B53C30006FF205 /* HexKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FCCEA19B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,8 +154,8 @@
 		D88FCCE819B53C30006FF205 /* HexKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				D8BC7FEA19C5DB75003E62D0 /* Menu */,
-				D8BC7FE919C5DB64003E62D0 /* Instrument */,
+				D8BC7FE819C5DA00003E62D0 /* Instrument */,
+				D8BC7FE719C5D9BA003E62D0 /* Settings Menu */,
 				D838382419B654E2003D1559 /* Resources */,
 				D88FCCEB19B53C30006FF205 /* AppDelegate.swift */,
 				D88FCCF019B53C30006FF205 /* ViewController.swift */,
@@ -190,26 +192,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D8BC7FE919C5DB64003E62D0 /* Instrument */ = {
+		D8BC7FE719C5D9BA003E62D0 /* Settings Menu */ = {
 			isa = PBXGroup;
 			children = (
-				D8ECE68819B5E8EE00BEB576 /* HexKey.swift */,
+				D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */,
+				D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */,
+				D8E74F0819BB629D003F2792 /* SettingsViewController.swift */,
+			);
+			name = "Settings Menu";
+			sourceTree = "<group>";
+		};
+		D8BC7FE819C5DA00003E62D0 /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
 				D88FCD0B19B53DE2006FF205 /* HexViewController.swift */,
 				D88FCD0D19B54338006FF205 /* Note.swift */,
+				D8ECE68819B5E8EE00BEB576 /* HexKey.swift */,
 				D88FCD0F19B5502D006FF205 /* HexView.swift */,
 				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
 				D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */,
 			);
 			name = Instrument;
-			sourceTree = "<group>";
-		};
-		D8BC7FEA19C5DB75003E62D0 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				D8E74F0819BB629D003F2792 /* SettingsViewController.swift */,
-				D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */,
-			);
-			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +331,7 @@
 				D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */,
 				D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */,
 				D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */,
+				D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */,
 				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,
 				D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */,
 				D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */,
