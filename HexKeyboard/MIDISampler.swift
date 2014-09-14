@@ -13,6 +13,7 @@ class MIDISampler : NotePlayer {
     let engine : AVAudioEngine
     let mixer : AVAudioMixerNode
     let sampler: AVAudioUnitSampler
+    
     init() {
         engine  = AVAudioEngine()
         mixer = AVAudioMixerNode()
@@ -23,15 +24,27 @@ class MIDISampler : NotePlayer {
         engine.startAndReturnError(err)
         if err != nil {println(err)}
         
-        sampler = AVAudioUnitSampler()
+        self.sampler = AVAudioUnitSampler()
         engine.attachNode(sampler)
-        let try_url = NSBundle.mainBundle().URLForResource("C", withExtension: "m4a")
-        if let url = try_url {
+
+        engine.connect(sampler, to: mixer, format: nil)
+        
+    }
+    
+    convenience init(URL url : NSURL) {
+        self.init()
+        var err : NSErrorPointer = nil
+        sampler.loadAudioFilesAtURLs([url], error: err)
+        if err != nil {println(err)}
+    }
+    
+    convenience init(sound_name : String) {
+        self.init()
+        if let url = NSBundle.mainBundle().URLForResource(sound_name, withExtension: "m4a") {
+            var err : NSErrorPointer = nil
             sampler.loadAudioFilesAtURLs([url], error: err)
             if err != nil {println(err)}
         }
-        engine.connect(sampler, to: mixer, format: nil)
-        
     }
     
     func play(note: Note) {

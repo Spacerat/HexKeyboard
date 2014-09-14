@@ -13,7 +13,7 @@ import AVFoundation
 
 class HexViewController: UIViewController, HexViewDelegate {
     
-    var player : NotePlayer = MIDISampler()
+    var player : NotePlayer = MIDISampler(sound_name: "C")
     
     override func viewDidLoad() {
         super.viewDidLoad()
