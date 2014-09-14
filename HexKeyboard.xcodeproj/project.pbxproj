@@ -7,18 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D838384119B68CBE003D1559 /* A.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383A19B68CBE003D1559 /* A.m4a */; };
-		D838384219B68CBE003D1559 /* B.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383B19B68CBE003D1559 /* B.m4a */; };
-		D838384319B68CBE003D1559 /* C.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383C19B68CBE003D1559 /* C.m4a */; };
-		D838384419B68CBE003D1559 /* D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383D19B68CBE003D1559 /* D.m4a */; };
-		D838384519B68CBE003D1559 /* E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383E19B68CBE003D1559 /* E.m4a */; };
-		D838384619B68CBE003D1559 /* F.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383F19B68CBE003D1559 /* F.m4a */; };
-		D838384719B68CBE003D1559 /* G.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384019B68CBE003D1559 /* G.m4a */; };
-		D838384D19B6948C003D1559 /* Bb.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384819B6948C003D1559 /* Bb.m4a */; };
-		D838384E19B6948C003D1559 /* C#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384919B6948C003D1559 /* C#.m4a */; };
-		D838384F19B6948C003D1559 /* D#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384A19B6948C003D1559 /* D#.m4a */; };
-		D838385019B6948C003D1559 /* F#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384B19B6948C003D1559 /* F#.m4a */; };
-		D838385119B6948C003D1559 /* G#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384C19B6948C003D1559 /* G#.m4a */; };
+		D8194CBE19C63E3E009F2499 /* Piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8E391EA19C6140D00C506E2 /* Piano.m4a */; };
+		D8194CC019C64144009F2499 /* Pulse.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8194CBF19C64144009F2499 /* Pulse.m4a */; };
+		D8194CC219C646CD009F2499 /* Swell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8194CC119C646CD009F2499 /* Swell.m4a */; };
+		D838384319B68CBE003D1559 /* Bell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383C19B68CBE003D1559 /* Bell.m4a */; };
 		D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84F43EE19C5C4720081E3D1 /* defaults.plist */; };
 		D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */; };
 		D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */; };
@@ -31,10 +23,14 @@
 		D88FCD0C19B53DE2006FF205 /* HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0B19B53DE2006FF205 /* HexViewController.swift */; };
 		D88FCD0E19B54338006FF205 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0D19B54338006FF205 /* Note.swift */; };
 		D88FCD1019B5502D006FF205 /* HexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0F19B5502D006FF205 /* HexView.swift */; };
+		D8DD6D6319C5F3770063F0BE /* Instruments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6D6219C5F3770063F0BE /* Instruments.swift */; };
 		D8DEA98A19B6205E00CF8FCE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */; };
 		D8DEA98B19B6205E00CF8FCE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */; };
 		D8DEA98C19B6205E00CF8FCE /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */; };
 		D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DEA98D19B6236800CF8FCE /* Synth.swift */; };
+		D8E391E519C60A9500C506E2 /* record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E391E419C60A9500C506E2 /* record@2x.png */; };
+		D8E391E719C60AF700C506E2 /* record2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E391E619C60AF700C506E2 /* record2.png */; };
+		D8E391E919C6109300C506E2 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E391E819C6109300C506E2 /* record.png */; };
 		D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E74F0819BB629D003F2792 /* SettingsViewController.swift */; };
 		D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */; };
 		D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECE68819B5E8EE00BEB576 /* HexKey.swift */; };
@@ -51,18 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D838383A19B68CBE003D1559 /* A.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = A.m4a; path = HexKeyboard/A.m4a; sourceTree = "<group>"; };
-		D838383B19B68CBE003D1559 /* B.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = B.m4a; path = HexKeyboard/B.m4a; sourceTree = "<group>"; };
-		D838383C19B68CBE003D1559 /* C.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = C.m4a; path = HexKeyboard/C.m4a; sourceTree = "<group>"; };
-		D838383D19B68CBE003D1559 /* D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = D.m4a; path = HexKeyboard/D.m4a; sourceTree = "<group>"; };
-		D838383E19B68CBE003D1559 /* E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = E.m4a; path = HexKeyboard/E.m4a; sourceTree = "<group>"; };
-		D838383F19B68CBE003D1559 /* F.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = F.m4a; path = HexKeyboard/F.m4a; sourceTree = "<group>"; };
-		D838384019B68CBE003D1559 /* G.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = G.m4a; path = HexKeyboard/G.m4a; sourceTree = "<group>"; };
-		D838384819B6948C003D1559 /* Bb.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bb.m4a; path = HexKeyboard/Bb.m4a; sourceTree = "<group>"; };
-		D838384919B6948C003D1559 /* C#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "C#.m4a"; path = "HexKeyboard/C#.m4a"; sourceTree = "<group>"; };
-		D838384A19B6948C003D1559 /* D#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "D#.m4a"; path = "HexKeyboard/D#.m4a"; sourceTree = "<group>"; };
-		D838384B19B6948C003D1559 /* F#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "F#.m4a"; path = "HexKeyboard/F#.m4a"; sourceTree = "<group>"; };
-		D838384C19B6948C003D1559 /* G#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "G#.m4a"; path = "HexKeyboard/G#.m4a"; sourceTree = "<group>"; };
+		D8194CBF19C64144009F2499 /* Pulse.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pulse.m4a; path = HexKeyboard/Pulse.m4a; sourceTree = "<group>"; };
+		D8194CC119C646CD009F2499 /* Swell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Swell.m4a; path = HexKeyboard/Swell.m4a; sourceTree = "<group>"; };
+		D838383C19B68CBE003D1559 /* Bell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bell.m4a; path = HexKeyboard/Bell.m4a; sourceTree = "<group>"; };
 		D84F43EE19C5C4720081E3D1 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = HexKeyboard/defaults.plist; sourceTree = "<group>"; };
 		D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentSelectionViewController.swift; sourceTree = "<group>"; };
 		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
@@ -79,10 +66,15 @@
 		D88FCD0B19B53DE2006FF205 /* HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexViewController.swift; sourceTree = "<group>"; };
 		D88FCD0D19B54338006FF205 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D88FCD0F19B5502D006FF205 /* HexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexView.swift; sourceTree = "<group>"; };
+		D8DD6D6219C5F3770063F0BE /* Instruments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruments.swift; sourceTree = "<group>"; };
 		D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D8DEA98D19B6236800CF8FCE /* Synth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synth.swift; sourceTree = "<group>"; };
+		D8E391E419C60A9500C506E2 /* record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record@2x.png"; path = "HexKeyboard/record@2x.png"; sourceTree = "<group>"; };
+		D8E391E619C60AF700C506E2 /* record2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record2.png; path = HexKeyboard/record2.png; sourceTree = "<group>"; };
+		D8E391E819C6109300C506E2 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record.png; path = HexKeyboard/record.png; sourceTree = "<group>"; };
+		D8E391EA19C6140D00C506E2 /* Piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Piano.m4a; path = HexKeyboard/Piano.m4a; sourceTree = "<group>"; };
 		D8E74F0819BB629D003F2792 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISampler.swift; sourceTree = "<group>"; };
 		D8ECE68819B5E8EE00BEB576 /* HexKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKey.swift; sourceTree = "<group>"; };
@@ -112,18 +104,13 @@
 		D838382419B654E2003D1559 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D838384819B6948C003D1559 /* Bb.m4a */,
-				D838384919B6948C003D1559 /* C#.m4a */,
-				D838384A19B6948C003D1559 /* D#.m4a */,
-				D838384B19B6948C003D1559 /* F#.m4a */,
-				D838384C19B6948C003D1559 /* G#.m4a */,
-				D838383A19B68CBE003D1559 /* A.m4a */,
-				D838383B19B68CBE003D1559 /* B.m4a */,
-				D838383C19B68CBE003D1559 /* C.m4a */,
-				D838383D19B68CBE003D1559 /* D.m4a */,
-				D838383E19B68CBE003D1559 /* E.m4a */,
-				D838383F19B68CBE003D1559 /* F.m4a */,
-				D838384019B68CBE003D1559 /* G.m4a */,
+				D8194CC119C646CD009F2499 /* Swell.m4a */,
+				D8194CBF19C64144009F2499 /* Pulse.m4a */,
+				D8E391EA19C6140D00C506E2 /* Piano.m4a */,
+				D8E391E819C6109300C506E2 /* record.png */,
+				D8E391E619C60AF700C506E2 /* record2.png */,
+				D8E391E419C60A9500C506E2 /* record@2x.png */,
+				D838383C19B68CBE003D1559 /* Bell.m4a */,
 				D84F43EE19C5C4720081E3D1 /* defaults.plist */,
 			);
 			name = Resources;
@@ -211,6 +198,7 @@
 				D88FCD0F19B5502D006FF205 /* HexView.swift */,
 				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
 				D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */,
+				D8DD6D6219C5F3770063F0BE /* Instruments.swift */,
 			);
 			name = Instrument;
 			sourceTree = "<group>";
@@ -295,21 +283,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D838385019B6948C003D1559 /* F#.m4a in Resources */,
-				D838384D19B6948C003D1559 /* Bb.m4a in Resources */,
-				D838384119B68CBE003D1559 /* A.m4a in Resources */,
-				D838384E19B6948C003D1559 /* C#.m4a in Resources */,
-				D838385119B6948C003D1559 /* G#.m4a in Resources */,
-				D838384319B68CBE003D1559 /* C.m4a in Resources */,
+				D8194CBE19C63E3E009F2499 /* Piano.m4a in Resources */,
+				D8E391E519C60A9500C506E2 /* record@2x.png in Resources */,
+				D8E391E919C6109300C506E2 /* record.png in Resources */,
+				D8194CC019C64144009F2499 /* Pulse.m4a in Resources */,
+				D838384319B68CBE003D1559 /* Bell.m4a in Resources */,
 				D88FCCF419B53C30006FF205 /* Main.storyboard in Resources */,
+				D8E391E719C60AF700C506E2 /* record2.png in Resources */,
 				D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */,
-				D838384719B68CBE003D1559 /* G.m4a in Resources */,
-				D838384619B68CBE003D1559 /* F.m4a in Resources */,
-				D838384519B68CBE003D1559 /* E.m4a in Resources */,
-				D838384419B68CBE003D1559 /* D.m4a in Resources */,
-				D838384F19B6948C003D1559 /* D#.m4a in Resources */,
+				D8194CC219C646CD009F2499 /* Swell.m4a in Resources */,
 				D88FCCF619B53C30006FF205 /* Images.xcassets in Resources */,
-				D838384219B68CBE003D1559 /* B.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +313,7 @@
 				D88FCD1019B5502D006FF205 /* HexView.swift in Sources */,
 				D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */,
 				D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */,
+				D8DD6D6319C5F3770063F0BE /* Instruments.swift in Sources */,
 				D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */,
 				D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */,
 				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,

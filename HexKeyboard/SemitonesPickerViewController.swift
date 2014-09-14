@@ -17,6 +17,7 @@ class SemitonesPickerViewController: UITableViewController {
     var selectedTranspose = Interval(semitones: 0)
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         selectedTranspose = Interval.transposeInterval()
     }
     
@@ -26,7 +27,9 @@ class SemitonesPickerViewController: UITableViewController {
         let interval = intervalForRowAtIndexPath(indexPath)
         cell.textLabel?.text = interval.transposeName
         cell.accessoryType = interval == selectedTranspose ? .Checkmark : .None
-        
+        if interval == selectedTranspose {
+            selectedCell = cell
+        }
         return cell
         
     }
@@ -55,4 +58,5 @@ class SemitonesPickerViewController: UITableViewController {
             }
         }
     }
+    
 }

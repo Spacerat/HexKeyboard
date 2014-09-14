@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UITableViewController {
     
     @IBOutlet weak var transposeCell: UITableViewCell!
+    @IBOutlet weak var instrumentCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,9 @@ class SettingsViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         transposeCell.detailTextLabel?.text = Interval.transposeInterval().transposeName
+        instrumentCell.detailTextLabel?.text = InstrumentSpec.currentInstrumentSpec.description
     }
     
     override func didReceiveMemoryWarning() {

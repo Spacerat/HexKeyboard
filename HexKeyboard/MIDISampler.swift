@@ -28,7 +28,6 @@ class MIDISampler : NotePlayer {
         engine.attachNode(sampler)
 
         engine.connect(sampler, to: mixer, format: nil)
-        
     }
     
     convenience init(URL url : NSURL) {
@@ -47,7 +46,15 @@ class MIDISampler : NotePlayer {
         }
     }
     
+    convenience required init(name : String) {
+        self.init(sound_name : name)
+    }
+    
     func play(note: Note) {
         sampler.startNote(UInt8(note.index), withVelocity: 200, onChannel: 0)
+    }
+    
+    deinit {
+        engine.stop()
     }
 }

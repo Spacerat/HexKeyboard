@@ -11,7 +11,8 @@ import Foundation
 let NoteNames = ["A", "Bb", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
 
 protocol NotePlayer : class {
-    func play(note: Note);
+    func play(note: Note)
+    init(name:String)
 }
 
 

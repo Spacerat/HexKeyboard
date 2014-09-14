@@ -75,6 +75,10 @@ class Synth : NotePlayer {
             scheduleFirstPlayerWith(buffer: buff)
         }
     }
+    
+    convenience required init(name:String) {
+        self.init()
+    }
 }
 
 
