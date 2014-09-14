@@ -152,21 +152,15 @@
 		D88FCCE819B53C30006FF205 /* HexKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D8BC7FEA19C5DB75003E62D0 /* Menu */,
+				D8BC7FE919C5DB64003E62D0 /* Instrument */,
 				D838382419B654E2003D1559 /* Resources */,
-				D8ECE68819B5E8EE00BEB576 /* HexKey.swift */,
 				D88FCCEB19B53C30006FF205 /* AppDelegate.swift */,
 				D88FCCF019B53C30006FF205 /* ViewController.swift */,
-				D8E74F0819BB629D003F2792 /* SettingsViewController.swift */,
 				D88FCCF219B53C30006FF205 /* Main.storyboard */,
-				D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */,
 				D88FCCF519B53C30006FF205 /* Images.xcassets */,
 				D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */,
 				D88FCCE919B53C30006FF205 /* Supporting Files */,
-				D88FCD0B19B53DE2006FF205 /* HexViewController.swift */,
-				D88FCD0D19B54338006FF205 /* Note.swift */,
-				D88FCD0F19B5502D006FF205 /* HexView.swift */,
-				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
-				D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */,
 			);
 			path = HexKeyboard;
 			sourceTree = "<group>";
@@ -194,6 +188,28 @@
 				D88FCD0019B53C30006FF205 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8BC7FE919C5DB64003E62D0 /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				D8ECE68819B5E8EE00BEB576 /* HexKey.swift */,
+				D88FCD0B19B53DE2006FF205 /* HexViewController.swift */,
+				D88FCD0D19B54338006FF205 /* Note.swift */,
+				D88FCD0F19B5502D006FF205 /* HexView.swift */,
+				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
+				D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */,
+			);
+			name = Instrument;
+			sourceTree = "<group>";
+		};
+		D8BC7FEA19C5DB75003E62D0 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D8E74F0819BB629D003F2792 /* SettingsViewController.swift */,
+				D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
