@@ -13,6 +13,7 @@ class HexKey : UILabel {
     override init() {
         super.init()
         self.layer.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+        self.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
     }
     
     override init(frame: CGRect) {
