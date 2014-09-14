@@ -22,7 +22,7 @@ class HexViewController: UIViewController, HexViewDelegate {
         //println(view)
         
         let k = AVAudioEngine()
-
+        println("viewDidLoad")
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,12 @@ class HexViewController: UIViewController, HexViewDelegate {
         let hexes = HexView()
         self.view = hexes
         hexes.delegate = self
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let hexes = self.view as? HexView {
+            hexes.refreshLabels()
+        }
     }
     
     func hexPressed(row: Int, column: Int) {

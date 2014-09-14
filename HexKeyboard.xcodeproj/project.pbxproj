@@ -19,6 +19,8 @@
 		D838384F19B6948C003D1559 /* D#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384A19B6948C003D1559 /* D#.m4a */; };
 		D838385019B6948C003D1559 /* F#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384B19B6948C003D1559 /* F#.m4a */; };
 		D838385119B6948C003D1559 /* G#.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838384C19B6948C003D1559 /* G#.m4a */; };
+		D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84F43EE19C5C4720081E3D1 /* defaults.plist */; };
+		D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */; };
 		D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCEB19B53C30006FF205 /* AppDelegate.swift */; };
 		D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */; };
 		D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCF019B53C30006FF205 /* ViewController.swift */; };
@@ -33,7 +35,6 @@
 		D8DEA98C19B6205E00CF8FCE /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */; };
 		D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DEA98D19B6236800CF8FCE /* Synth.swift */; };
 		D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E74F0819BB629D003F2792 /* SettingsViewController.swift */; };
-		D8E74F0B19BB66D0003F2792 /* TranspositionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E74F0A19BB66D0003F2792 /* TranspositionPickerViewController.swift */; };
 		D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */; };
 		D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECE68819B5E8EE00BEB576 /* HexKey.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,8 @@
 		D838384A19B6948C003D1559 /* D#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "D#.m4a"; path = "HexKeyboard/D#.m4a"; sourceTree = "<group>"; };
 		D838384B19B6948C003D1559 /* F#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "F#.m4a"; path = "HexKeyboard/F#.m4a"; sourceTree = "<group>"; };
 		D838384C19B6948C003D1559 /* G#.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "G#.m4a"; path = "HexKeyboard/G#.m4a"; sourceTree = "<group>"; };
+		D84F43EE19C5C4720081E3D1 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = HexKeyboard/defaults.plist; sourceTree = "<group>"; };
+		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
 		D88FCCE619B53C30006FF205 /* HexKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FCCEA19B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88FCCEB19B53C30006FF205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +82,6 @@
 		D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D8DEA98D19B6236800CF8FCE /* Synth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synth.swift; sourceTree = "<group>"; };
 		D8E74F0819BB629D003F2792 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D8E74F0A19BB66D0003F2792 /* TranspositionPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranspositionPickerViewController.swift; sourceTree = "<group>"; };
 		D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISampler.swift; sourceTree = "<group>"; };
 		D8ECE68819B5E8EE00BEB576 /* HexKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexKey.swift; path = ../HexKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				D838383E19B68CBE003D1559 /* E.m4a */,
 				D838383F19B68CBE003D1559 /* F.m4a */,
 				D838384019B68CBE003D1559 /* G.m4a */,
+				D84F43EE19C5C4720081E3D1 /* defaults.plist */,
 			);
 			name = Resources;
 			path = ..;
@@ -155,6 +158,7 @@
 				D88FCCF019B53C30006FF205 /* ViewController.swift */,
 				D8E74F0819BB629D003F2792 /* SettingsViewController.swift */,
 				D88FCCF219B53C30006FF205 /* Main.storyboard */,
+				D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */,
 				D88FCCF519B53C30006FF205 /* Images.xcassets */,
 				D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */,
 				D88FCCE919B53C30006FF205 /* Supporting Files */,
@@ -163,7 +167,6 @@
 				D88FCD0F19B5502D006FF205 /* HexView.swift */,
 				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
 				D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */,
-				D8E74F0A19BB66D0003F2792 /* TranspositionPickerViewController.swift */,
 			);
 			path = HexKeyboard;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				D838385119B6948C003D1559 /* G#.m4a in Resources */,
 				D838384319B68CBE003D1559 /* C.m4a in Resources */,
 				D88FCCF419B53C30006FF205 /* Main.storyboard in Resources */,
+				D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */,
 				D838384719B68CBE003D1559 /* G.m4a in Resources */,
 				D838384619B68CBE003D1559 /* F.m4a in Resources */,
 				D838384519B68CBE003D1559 /* E.m4a in Resources */,
@@ -309,11 +313,11 @@
 				D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */,
 				D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */,
 				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,
-				D8E74F0B19BB66D0003F2792 /* TranspositionPickerViewController.swift in Sources */,
 				D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */,
 				D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */,
 				D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */,
 				D88FCD0C19B53DE2006FF205 /* HexViewController.swift in Sources */,
+				D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */,
 				D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,9 +10,15 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     
+    @IBOutlet weak var transposeCell: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        transposeCell.detailTextLabel?.text = Interval.transposeInterval().transposeName
     }
     
     override func didReceiveMemoryWarning() {

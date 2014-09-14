@@ -18,7 +18,7 @@ class HexView: UIView {
     var rows = 4;
     weak var delegate : HexViewDelegate? {
         didSet {
-            self.setLabels()
+            self.refreshLabels()
         }
     }
     
@@ -54,7 +54,7 @@ class HexView: UIView {
         get { return self.subviews as [HexKey] }
     }
     
-    func setLabels() {
+    func refreshLabels() {
         var i = 0
         if let del = delegate {
             self.iterateHexes { (row, column, index, hex) -> () in
@@ -64,7 +64,7 @@ class HexView: UIView {
         }
     }
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         for touch in touches {
             let t = touch as UITouch
             iterateHexes { (row, column, index, hex) -> () in
@@ -76,7 +76,7 @@ class HexView: UIView {
         }
     }
 
-    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         for touch in touches {
             let t = touch as UITouch
             
