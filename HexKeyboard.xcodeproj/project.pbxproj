@@ -77,6 +77,7 @@
 		D88FCD0B19B53DE2006FF205 /* HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexViewController.swift; sourceTree = "<group>"; };
 		D88FCD0D19B54338006FF205 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D88FCD0F19B5502D006FF205 /* HexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexView.swift; sourceTree = "<group>"; };
+		D8DD6D6119C5E5D00063F0BE /* iconresize.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = iconresize.sh; path = HexKeyboard/iconresize.sh; sourceTree = "<group>"; };
 		D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -131,6 +132,7 @@
 		D88FCCDD19B53C2F006FF205 = {
 			isa = PBXGroup;
 			children = (
+				D8DD6D6119C5E5D00063F0BE /* iconresize.sh */,
 				D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */,
 				D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */,
 				D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */,
