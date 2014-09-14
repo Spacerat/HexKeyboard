@@ -62,7 +62,7 @@ class InstrumentSelectionViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
