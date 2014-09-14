@@ -11,7 +11,7 @@ import UIKit
 
 class SemitonesPickerViewController: UITableViewController {
     let minTranspose = -12
-    let maxTranspose = 20
+    let maxTranspose = 24
     
     var selectedCell : UITableViewCell?
     var selectedTranspose = Interval(semitones: 0)
@@ -37,7 +37,7 @@ class SemitonesPickerViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return maxTranspose - minTranspose
+        return maxTranspose - minTranspose + 1
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
