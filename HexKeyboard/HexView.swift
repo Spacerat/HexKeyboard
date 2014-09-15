@@ -35,7 +35,10 @@ class HexView: UIView {
                 label.textAlignment = .Center
             }
         }
+        self.accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
+        self.isAccessibilityElement = true
         self.multipleTouchEnabled = true
+        self.accessibilityLabel = "Keyboard"
         backgroundColor = UIColor.whiteColor()
     }
     
