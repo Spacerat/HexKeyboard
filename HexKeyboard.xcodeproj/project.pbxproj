@@ -14,6 +14,7 @@
 		D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84F43EE19C5C4720081E3D1 /* defaults.plist */; };
 		D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */; };
 		D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */; };
+		D88B13AD19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B13AC19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift */; };
 		D88FCCEC19B53C30006FF205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCEB19B53C30006FF205 /* AppDelegate.swift */; };
 		D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */; };
 		D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCCF019B53C30006FF205 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		D84F43EE19C5C4720081E3D1 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = HexKeyboard/defaults.plist; sourceTree = "<group>"; };
 		D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentSelectionViewController.swift; sourceTree = "<group>"; };
 		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
+		D88B13AC19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Hexagon.swift"; sourceTree = "<group>"; };
 		D88FCCE619B53C30006FF205 /* HexKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FCCEA19B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88FCCEB19B53C30006FF205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				D88FCCF519B53C30006FF205 /* Images.xcassets */,
 				D88FCCED19B53C30006FF205 /* HexKeyboard.xcdatamodeld */,
 				D88FCCE919B53C30006FF205 /* Supporting Files */,
+				D88B13AC19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift */,
 			);
 			path = HexKeyboard;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				D88FCCF119B53C30006FF205 /* ViewController.swift in Sources */,
 				D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */,
 				D8DD6D6319C5F3770063F0BE /* Instruments.swift in Sources */,
+				D88B13AD19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift in Sources */,
 				D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */,
 				D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */,
 				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,

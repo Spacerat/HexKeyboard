@@ -9,26 +9,47 @@
 import UIKit
 
 class HexKey : UILabel {
-
+    
+    let shape = CAShapeLayer()
+    
     override init() {
         super.init()
-        self.layer.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
-        self.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+        self.opaque = false
+        self.layer.addSublayer(shape)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
+    
+    override var frame : CGRect {
+        get {
+            return super.frame
+        }
+        set {
+            super.frame = newValue
+            let rect = CGRect(origin: CGPointZero, size: newValue.size)
+            shape.path = UIBezierPath(hexagonWithSize: rect.size).CGPath
+            let newbounds = CGPathGetBoundingBox(shape.path)
+            shape.fillColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+        }
+    }
 
+    override func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
+        return CGPathContainsPoint(shape.path, nil, point, true)
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     func doPressAnimation() {
-        self.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4).CGColor
-        UIView.animateWithDuration(0.5, animations: {
-            self.layer.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
-        })
-
+        let animation = CABasicAnimation(keyPath: "fillColor")
+        animation.duration = 0.5
+        animation.fromValue = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4).CGColor
+        animation.toValue = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+        animation.repeatCount = 1
+        animation.autoreverses = false
+        shape.addAnimation(animation, forKey: "fillColor")
     }
 }

@@ -14,7 +14,7 @@ protocol HexViewDelegate : class {
 }
 
 class HexView: UIView {
-    var columns = 8;
+    var columns = 9;
     var rows = 4;
     weak var delegate : HexViewDelegate? {
         didSet {
@@ -98,16 +98,18 @@ class HexView: UIView {
     
     override func layoutSubviews() {
         let hexHeight = frame.height / (0.5+CGFloat(self.rows));
-        let hexWidth = frame.width / CGFloat(self.columns);
+        let hexWidth = (frame.width / (CGFloat(self.columns)*3.0+1))*4.0
         
+        let overlap :CGFloat = 18.0
+        let offset : CGFloat = overlap / 2.0
         var i = 0
         
         self.iterateHexes { (r, c, i, hex) -> () in
-            let x = CGFloat(c) * hexWidth;
-            let y = CGFloat(r) * hexHeight + CGFloat(c%2)*hexHeight/2.0;
-            let xi = Int(x)
-            let yi = Int(y)
-            hex.frame = CGRect(x: x, y: y, width: hexWidth+20, height: hexHeight+20)
+            let x = CGFloat(c) * hexWidth*0.75 - offset;
+            let y = CGFloat(r) * hexHeight + CGFloat(c%2)*hexHeight/2.0 - offset;
+            let w = hexWidth + overlap
+            let h = hexHeight + overlap
+            hex.frame = CGRect(x: x, y: y, width: w, height: h)
         }
     }
 }
