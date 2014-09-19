@@ -41,8 +41,11 @@ class HexKey : UILabel {
         didSet {
             if text?.rangeOfString("#") != nil || text?.rangeOfString("b") != nil {
                 baseColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).CGColor
-                shape.fillColor = baseColor
             }
+            else {
+                baseColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+            }
+            shape.fillColor = baseColor
         }
     }
 
