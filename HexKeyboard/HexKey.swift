@@ -12,6 +12,8 @@ class HexKey : UILabel {
     
     let shape = CAShapeLayer()
     
+    var baseColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+    
     override init() {
         super.init()
         self.opaque = false
@@ -31,7 +33,16 @@ class HexKey : UILabel {
             let rect = CGRect(origin: CGPointZero, size: newValue.size)
             shape.path = UIBezierPath(hexagonWithSize: rect.size).CGPath
             let newbounds = CGPathGetBoundingBox(shape.path)
-            shape.fillColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+            shape.fillColor = baseColor
+        }
+    }
+    
+    override var text : String? {
+        didSet {
+            if text?.rangeOfString("#") != nil || text?.rangeOfString("b") != nil {
+                baseColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).CGColor
+                shape.fillColor = baseColor
+            }
         }
     }
 
@@ -47,7 +58,7 @@ class HexKey : UILabel {
         let animation = CABasicAnimation(keyPath: "fillColor")
         animation.duration = 0.5
         animation.fromValue = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4).CGColor
-        animation.toValue = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
+        animation.toValue = baseColor
         animation.repeatCount = 1
         animation.autoreverses = false
         shape.addAnimation(animation, forKey: "fillColor")
