@@ -28,8 +28,8 @@ class HexView: UIView {
     
     override init() {
         super.init()
-        for c in 0..<columns {
-            for r in 0..<rows {
+        for c in -1..<columns+1 {
+            for r in -1..<rows+1 {
                 let label = HexKey()
                 self.addSubview(label)
                 label.textAlignment = .Center
@@ -44,8 +44,8 @@ class HexView: UIView {
     
     func iterateHexes(cb : (row:Int, column:Int, index:Int, hex: HexKey )->() ) {
         var i = 0;
-        for c in 0..<columns {
-            for r in 0..<rows {
+        for c in -1..<columns+1 {
+            for r in -1..<rows+1 {
                 let hex = hexes[i]
                 cb(row: r, column: c, index: i, hex: hex)
                 i++;
