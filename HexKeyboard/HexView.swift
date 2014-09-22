@@ -28,6 +28,20 @@ class HexView: UIView {
     
     override init() {
         super.init()
+        self.accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
+        self.isAccessibilityElement = true
+        self.multipleTouchEnabled = true
+        self.accessibilityLabel = "Keyboard"
+        backgroundColor = UIColor.whiteColor()
+        createKeys()
+    }
+    
+    func createKeys() {
+
+        for hex in self.subviews {
+            hex.removeFromSuperview()
+        }
+
         for c in -1..<columns+1 {
             for r in -1..<rows+1 {
                 let label = HexKey()
@@ -35,13 +49,8 @@ class HexView: UIView {
                 label.textAlignment = .Center
             }
         }
-        self.accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
-        self.isAccessibilityElement = true
-        self.multipleTouchEnabled = true
-        self.accessibilityLabel = "Keyboard"
-        backgroundColor = UIColor.whiteColor()
     }
-    
+
     func iterateHexes(cb : (row:Int, column:Int, index:Int, hex: HexKey )->() ) {
         var i = 0;
         for c in -1..<columns+1 {
@@ -97,6 +106,11 @@ class HexView: UIView {
     }
     
     override func layoutSubviews() {
+        self.rows = Int((floor(frame.height / 66)))
+        self.columns = Int(floor(frame.width / 55))
+        createKeys()
+        refreshLabels()
+        
         let hexHeight = frame.height / (0.5+CGFloat(self.rows));
         let hexWidth = (frame.width / (CGFloat(self.columns)*3.0+1))*4.0
         

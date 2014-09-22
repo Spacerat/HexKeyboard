@@ -57,7 +57,8 @@ struct Note : Printable {
     
     var name : String {
         get {
-            return NoteNames[(self.index+3) % 12]
+            let i = self.index < 0 ? self.index + 48 : self.index
+            return NoteNames[(i+3) % 12]
         }
     }
     
