@@ -51,6 +51,7 @@
 		D8194CBF19C64144009F2499 /* Pulse.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pulse.m4a; path = HexKeyboard/Pulse.m4a; sourceTree = "<group>"; };
 		D8194CC119C646CD009F2499 /* Swell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Swell.m4a; path = HexKeyboard/Swell.m4a; sourceTree = "<group>"; };
 		D838383C19B68CBE003D1559 /* Bell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bell.m4a; path = HexKeyboard/Bell.m4a; sourceTree = "<group>"; };
+		D83E80CC19DB808200450F6A /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		D84F43EE19C5C4720081E3D1 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = HexKeyboard/defaults.plist; sourceTree = "<group>"; };
 		D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentSelectionViewController.swift; sourceTree = "<group>"; };
 		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		D88FCCDD19B53C2F006FF205 = {
 			isa = PBXGroup;
 			children = (
+				D83E80CC19DB808200450F6A /* CoreAudioKit.framework */,
 				D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */,
 				D8DEA98819B6205E00CF8FCE /* AVFoundation.framework */,
 				D8DEA98919B6205E00CF8FCE /* CoreAudio.framework */,
@@ -255,6 +257,7 @@
 				TargetAttributes = {
 					D88FCCE519B53C30006FF205 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = RP693SQC5G;
 					};
 					D88FCCFA19B53C30006FF205 = {
 						CreatedOnToolsVersion = 6.0;
@@ -444,10 +447,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HexKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -456,10 +462,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HexKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

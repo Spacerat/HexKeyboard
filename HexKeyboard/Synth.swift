@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+//import CoreAudioKit
 
 class Synth : NotePlayer {
     let engine : AVAudioEngine
@@ -44,6 +45,9 @@ class Synth : NotePlayer {
             if let url = bundleUrl {
                 var err : NSError?
                 let file = AVAudioFile(forReading: url, error: &err)
+                
+                println(err?.description)
+                
                 if err != nil {
                     println(err)
                 }

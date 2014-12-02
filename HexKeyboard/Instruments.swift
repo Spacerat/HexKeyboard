@@ -29,13 +29,13 @@ struct InstrumentSpec : Printable {
         let name = dict["name"]! as String
         let kindName = dict["kind"]! as String
         let builtin = dict["builtin"]! as Bool
-        let kind = InstrumentKind.fromRaw(kindName) ?? InstrumentKind.MIDI
+        let kind = InstrumentKind(rawValue: kindName) ?? InstrumentKind.MIDI
         self.init(name: name, kind:kind, builtin: builtin)
     }
     
     var dict : NSDictionary {
         get {
-            return ["name" : name, "kind": kind.toRaw(), "builtin" : builtin]
+            return ["name" : name, "kind": kind.rawValue, "builtin" : builtin]
         }
     }
     

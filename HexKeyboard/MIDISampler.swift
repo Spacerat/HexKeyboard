@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import CoreAudio
 
 class MIDISampler : NotePlayer {
     let engine : AVAudioEngine
@@ -28,6 +29,9 @@ class MIDISampler : NotePlayer {
         engine.attachNode(sampler)
 
         engine.connect(sampler, to: mixer, format: nil)
+        
+
+        
     }
     
     convenience init(URL url : NSURL) {
