@@ -46,10 +46,21 @@ class MIDISampler : NotePlayer {
         if let url = NSBundle.mainBundle().URLForResource(sound_name, withExtension: "m4a") {
             var err : NSErrorPointer = nil
             sampler.loadAudioFilesAtURLs([url], error: err)
+
             if err != nil {println(err)}
         }
     }
     
+    convenience init(instrumentName : String, withExtension ext: String) {
+        self.init()
+        if let url = NSBundle.mainBundle().URLForResource(instrumentName, withExtension: ext) {
+            var err : NSErrorPointer = nil
+            sampler.loadInstrumentAtURL(url, error: err)
+            if err != nil {println(err)}
+        }
+    }
+    
+
     convenience required init(name : String) {
         self.init(sound_name : name)
     }

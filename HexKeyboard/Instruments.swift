@@ -10,6 +10,7 @@ import Foundation
 
 enum InstrumentKind : String {
     case MIDI = "MIDI"
+    case EXS = "EXS"
 }
 
 struct InstrumentSpec : Printable {
@@ -43,16 +44,24 @@ struct InstrumentSpec : Printable {
         self.init(name: name, kind:.MIDI, builtin: true)
     }
     
+    init(EXS name:String) {
+        self.init(name: name, kind:.EXS, builtin: true)
+    }
+    
     static func getBuiltinInstruments() -> [InstrumentSpec] {
         return [InstrumentSpec(BuiltinMIDI: "Bell"),
                 InstrumentSpec(BuiltinMIDI: "Swell"),
                 InstrumentSpec(BuiltinMIDI: "Piano"),
-                InstrumentSpec(BuiltinMIDI: "Pulse")]
+                InstrumentSpec(BuiltinMIDI: "Pulse"),
+                InstrumentSpec(EXS: "Full Organ")]
     }
     
     func getInstrument() -> NotePlayer? {
         if kind == .MIDI {
             return MIDISampler(name: name)
+        }
+        if kind == .EXS {
+            return MIDISampler(instrumentName: name, withExtension: "exs")
         }
         return nil
     }
