@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8191BFA1A30A4D8008A5B80 /* Full Organ.exs in Resources */ = {isa = PBXBuildFile; fileRef = D8191BF91A30A4D8008A5B80 /* Full Organ.exs */; };
 		D8194CBE19C63E3E009F2499 /* Piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8E391EA19C6140D00C506E2 /* Piano.m4a */; };
 		D8194CC019C64144009F2499 /* Pulse.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8194CBF19C64144009F2499 /* Pulse.m4a */; };
 		D8194CC219C646CD009F2499 /* Swell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8194CC119C646CD009F2499 /* Swell.m4a */; };
@@ -35,6 +34,8 @@
 		D8E391E919C6109300C506E2 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E391E819C6109300C506E2 /* record.png */; };
 		D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E74F0819BB629D003F2792 /* SettingsViewController.swift */; };
 		D8E8839119B7E0CB00A8EC6D /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */; };
+		D8EA55D81A3B3D7A00239629 /* Full Organ.exs in Resources */ = {isa = PBXBuildFile; fileRef = D8EA55D71A3B3D7A00239629 /* Full Organ.exs */; };
+		D8EA55DE1A3B400500239629 /* Sampler Files in Resources */ = {isa = PBXBuildFile; fileRef = D8EA55DD1A3B400500239629 /* Sampler Files */; };
 		D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECE68819B5E8EE00BEB576 /* HexKey.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D8191BF91A30A4D8008A5B80 /* Full Organ.exs */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Full Organ.exs"; path = "HexKeyboard/Full Organ.exs"; sourceTree = "<group>"; };
 		D8194CBF19C64144009F2499 /* Pulse.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pulse.m4a; path = HexKeyboard/Pulse.m4a; sourceTree = "<group>"; };
 		D8194CC119C646CD009F2499 /* Swell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Swell.m4a; path = HexKeyboard/Swell.m4a; sourceTree = "<group>"; };
 		D838383C19B68CBE003D1559 /* Bell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bell.m4a; path = HexKeyboard/Bell.m4a; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		D8E391EA19C6140D00C506E2 /* Piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Piano.m4a; path = HexKeyboard/Piano.m4a; sourceTree = "<group>"; };
 		D8E74F0819BB629D003F2792 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISampler.swift; sourceTree = "<group>"; };
+		D8EA55D71A3B3D7A00239629 /* Full Organ.exs */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Full Organ.exs"; path = "HexKeyboard/Full Organ.exs"; sourceTree = "<group>"; };
+		D8EA55DD1A3B400500239629 /* Sampler Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Sampler Files"; path = "HexKeyboard/Sampler Files"; sourceTree = "<group>"; };
 		D8ECE68819B5E8EE00BEB576 /* HexKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +111,8 @@
 		D838382419B654E2003D1559 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D8191BF91A30A4D8008A5B80 /* Full Organ.exs */,
+				D8EA55DD1A3B400500239629 /* Sampler Files */,
+				D8EA55D71A3B3D7A00239629 /* Full Organ.exs */,
 				D8194CC119C646CD009F2499 /* Swell.m4a */,
 				D8194CBF19C64144009F2499 /* Pulse.m4a */,
 				D8E391EA19C6140D00C506E2 /* Piano.m4a */,
@@ -300,9 +303,10 @@
 				D88FCCF419B53C30006FF205 /* Main.storyboard in Resources */,
 				D8E391E719C60AF700C506E2 /* record2.png in Resources */,
 				D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */,
+				D8EA55DE1A3B400500239629 /* Sampler Files in Resources */,
 				D8194CC219C646CD009F2499 /* Swell.m4a in Resources */,
 				D88FCCF619B53C30006FF205 /* Images.xcassets in Resources */,
-				D8191BFA1A30A4D8008A5B80 /* Full Organ.exs in Resources */,
+				D8EA55D81A3B3D7A00239629 /* Full Organ.exs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
