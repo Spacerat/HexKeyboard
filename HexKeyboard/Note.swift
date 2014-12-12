@@ -12,7 +12,9 @@ let NoteNames = ["A", "Bb", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
 
 protocol NotePlayer : class {
     func play(note: Note)
-    init(name:String)
+    func release(note: Note)
+    init?(instrument:InstrumentSpec)
+    var currentInstrument : InstrumentSpec {get}
 }
 
 
@@ -59,6 +61,12 @@ struct Note : Printable {
         get {
             let i = self.index < 0 ? self.index + 48 : self.index
             return NoteNames[(i+3) % 12]
+        }
+    }
+    
+    var MIDIindex :UInt8 {
+        get {
+            return UInt8(self.index)
         }
     }
     

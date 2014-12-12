@@ -17,26 +17,38 @@ struct InstrumentSpec : Printable {
     let name : String
     let kind : InstrumentKind
     let builtin : Bool
+    let transient : Bool
+    static let defaultInstrumentSpec = InstrumentSpec.getBuiltinInstruments()[0]
     
     var description : String {get { return name }}
-    
-    init(name:String, kind:InstrumentKind, builtin:Bool) {
+    init(name:String, kind:InstrumentKind, builtin:Bool, transient: Bool) {
         self.name = name
         self.kind = kind
         self.builtin = builtin
+        self.transient = transient
+    }
+    
+    init(name:String, kind:InstrumentKind, builtin:Bool) {
+        self.init(name:name, kind:kind, builtin:builtin, transient: true)
     }
     
     init(dict: [NSObject : AnyObject]) {
         let name = dict["name"]! as String
         let kindName = dict["kind"]! as String
         let builtin = dict["builtin"]! as Bool
+        let transient = (dict["transient"] as Bool?) ?? true
         let kind = InstrumentKind(rawValue: kindName) ?? InstrumentKind.MIDI
-        self.init(name: name, kind:kind, builtin: builtin)
+        self.init(name: name, kind:kind, builtin: builtin, transient: transient)
     }
     
     var dict : NSDictionary {
         get {
-            return ["name" : name, "kind": kind.rawValue, "builtin" : builtin]
+            return [
+                "name" : name,
+                "kind": kind.rawValue,
+                "builtin" : builtin,
+                "transient" : transient
+            ]
         }
     }
     
@@ -44,8 +56,8 @@ struct InstrumentSpec : Printable {
         self.init(name: name, kind:.MIDI, builtin: true)
     }
     
-    init(EXS name:String) {
-        self.init(name: name, kind:.EXS, builtin: true)
+    init(EXS name:String, isTransient transient:Bool) {
+        self.init(name: name, kind:.EXS, builtin: true, transient: transient)
     }
     
     static func getBuiltinInstruments() -> [InstrumentSpec] {
@@ -53,29 +65,27 @@ struct InstrumentSpec : Printable {
                 InstrumentSpec(BuiltinMIDI: "Swell"),
                 InstrumentSpec(BuiltinMIDI: "Piano"),
                 InstrumentSpec(BuiltinMIDI: "Pulse"),
-                InstrumentSpec(EXS: "Full Organ")]
+                InstrumentSpec(EXS: "Full Organ", isTransient: false)
+        ]
     }
     
     func getInstrument() -> NotePlayer? {
-        if kind == .MIDI {
-            return MIDISampler(name: name)
-        }
-        if kind == .EXS {
-            return MIDISampler(instrumentName: name, withExtension: "exs")
-        }
-        return nil
+        return MIDISampler(instrument: self)
     }
     
     static var currentInstrumentSpec : InstrumentSpec {
         get {
             let defaults = NSUserDefaults.standardUserDefaults()
+            let defaultInstrument = InstrumentSpec(name: "Bell", kind: .MIDI, builtin: true)
+        
             if let dict = defaults.dictionaryForKey("instrument") {
-                return InstrumentSpec(dict: dict)
+                let instrument = InstrumentSpec(dict: dict)
+                self.currentInstrumentSpec = instrument
+                return instrument
             }
-            else {
-                self.currentInstrumentSpec = InstrumentSpec(name: "Bell", kind: .MIDI, builtin: true)
-                return self.currentInstrumentSpec
-            }
+
+            self.currentInstrumentSpec = defaultInstrument
+            return self.currentInstrumentSpec
         }
         set {
             let defaults = NSUserDefaults.standardUserDefaults()

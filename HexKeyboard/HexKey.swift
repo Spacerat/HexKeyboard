@@ -10,10 +10,11 @@ import UIKit
 
 class HexKey : UILabel {
     
-    let shape = CAShapeLayer()
-    
+    let pressColour = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4).CGColor
     var baseColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.4).CGColor
     
+    let shape = CAShapeLayer()
+    var held : Bool = false
     override init() {
         super.init()
         self.opaque = false
@@ -57,13 +58,27 @@ class HexKey : UILabel {
         super.init(coder: aDecoder)
     }
     
-    func doPressAnimation() {
-        let animation = CABasicAnimation(keyPath: "fillColor")
-        animation.duration = 0.5
-        animation.fromValue = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4).CGColor
-        animation.toValue = baseColor
-        animation.repeatCount = 1
-        animation.autoreverses = false
-        shape.addAnimation(animation, forKey: "fillColor")
+    func doPressAnimation(#hold: Bool) {
+        held = true
+        if (!hold) {
+            releaseAnimation()
+        }
+        else {
+            shape.fillColor = pressColour
+        }
+    }
+    
+    func releaseAnimation() {
+        if held {
+            shape.fillColor = baseColor
+            let animation = CABasicAnimation(keyPath: "fillColor")
+            animation.duration = 0.5
+            animation.fromValue = pressColour
+            animation.toValue = baseColor
+            animation.repeatCount = 1
+            animation.autoreverses = false
+            shape.addAnimation(animation, forKey: "fillColor")
+            held = false
+        }
     }
 }

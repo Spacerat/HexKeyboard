@@ -11,6 +11,8 @@ import UIKit
 protocol HexViewDelegate : class {
     func hexNameForRow(row: Int, column: Int) -> String
     func hexPressed(row:Int, column: Int)
+    func hexReleased(row:Int, column: Int)
+    func shouldHoldKeys() -> Bool
 }
 
 class HexView: UIView {
@@ -82,7 +84,7 @@ class HexView: UIView {
             iterateHexes { (row, column, index, hex) -> () in
                 if hex.pointInside(t.locationInView(hex), withEvent: nil) {
                     self.delegate?.hexPressed(row, column: column)
-                    hex.doPressAnimation()
+                    hex.doPressAnimation(hold: self.delegate?.shouldHoldKeys() ?? false)
                 }
             }
         }
@@ -93,9 +95,29 @@ class HexView: UIView {
             let t = touch as UITouch
             
             iterateHexes { (row, column, index, hex) -> () in
-                if hex.pointInside(t.locationInView(hex), withEvent: nil) && !hex.pointInside(t.previousLocationInView(hex), withEvent: nil) {
+                
+                let in_now = hex.pointInside(t.locationInView(hex), withEvent: nil)
+                let in_pre = hex.pointInside(t.previousLocationInView(hex), withEvent: nil)
+                
+                if in_now && !in_pre {
                     self.delegate?.hexPressed(row, column: column)
-                    hex.doPressAnimation()
+                    hex.doPressAnimation(hold: self.delegate?.shouldHoldKeys() ?? false)
+                }
+                if in_pre && !in_now {
+                    self.delegate?.hexReleased(row, column: column)
+                    hex.releaseAnimation()
+                }
+            }
+        }
+    }
+    
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        for touch in touches {
+            let t = touch as UITouch
+            iterateHexes { (row, column, index, hex) -> () in
+                if hex.pointInside(t.locationInView(hex), withEvent: nil) {
+                    self.delegate?.hexReleased(row, column: column)
+                    hex.releaseAnimation()
                 }
             }
         }

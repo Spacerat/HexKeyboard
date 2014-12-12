@@ -14,6 +14,7 @@ class MIDISampler : NotePlayer {
     let engine : AVAudioEngine
     let mixer : AVAudioMixerNode
     let sampler: AVAudioUnitSampler
+    var instrument : InstrumentSpec!
     
     init() {
         engine  = AVAudioEngine()
@@ -29,44 +30,59 @@ class MIDISampler : NotePlayer {
         engine.attachNode(sampler)
 
         engine.connect(sampler, to: mixer, format: nil)
-        
-
-        
     }
     
-    convenience init(URL url : NSURL) {
-        self.init()
-        var err : NSErrorPointer = nil
-        sampler.loadAudioFilesAtURLs([url], error: err)
-        if err != nil {println(err)}
-    }
-    
-    convenience init(sound_name : String) {
-        self.init()
-        if let url = NSBundle.mainBundle().URLForResource(sound_name, withExtension: "m4a") {
-            var err : NSErrorPointer = nil
-            sampler.loadAudioFilesAtURLs([url], error: err)
-
-            if err != nil {println(err)}
+    var currentInstrument : InstrumentSpec {
+        get {
+            return instrument
         }
     }
     
-    convenience init(instrumentName : String, withExtension ext: String) {
-        self.init()
-        if let url = NSBundle.mainBundle().URLForResource(instrumentName, withExtension: ext) {
-            var err : NSErrorPointer = nil
-            sampler.loadInstrumentAtURL(url, error: err)
-            if err != nil {println(err)}
+    func extForType(type: InstrumentKind) -> String? {
+        if type == .MIDI {
+            return "m4a"
         }
+        if type == .EXS {
+            return "exs"
+        }
+        return nil
     }
     
+    required convenience init?(instrument: InstrumentSpec) {
+        self.init()
+        if let ext = extForType(instrument.kind) {
+            if let url = NSBundle.mainBundle().URLForResource(instrument.name, withExtension: ext) {
+                var err : NSErrorPointer = nil
 
-    convenience required init(name : String) {
-        self.init(sound_name : name)
+                if instrument.kind == .MIDI {
+                sampler.loadAudioFilesAtURLs([url], error: err)
+                }
+                if instrument.kind == .EXS {
+                sampler.loadInstrumentAtURL(url, error: err)
+                }
+                if err != nil {
+                    println(err)
+                    return nil
+                }
+                self.instrument = instrument
+            }
+            else {
+                return nil
+            }
+        }
+        else {
+            return nil
+        }
     }
     
     func play(note: Note) {
-        sampler.startNote(UInt8(note.index), withVelocity: 200, onChannel: 0)
+        sampler.startNote(note.MIDIindex, withVelocity: 200, onChannel: 0)
+    }
+    
+    func release(note: Note) {
+        if !instrument.transient {
+            sampler.stopNote(note.MIDIindex, onChannel: 0)
+        }
     }
     
     deinit {

@@ -24,7 +24,7 @@ class HexViewController: UIViewController, HexViewDelegate {
         let k = AVAudioEngine()
         println("viewDidLoad")
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,19 +44,28 @@ class HexViewController: UIViewController, HexViewDelegate {
             player = instrument
         }
         else {
-            player = MIDISampler(sound_name: "Bells")
+            player = InstrumentSpec.defaultInstrumentSpec.getInstrument()
         }
     }
     
     func hexPressed(row: Int, column: Int) {
         let note = Note(hexRow: row, column: column)
-        println("\(note.index) : \(note.name)")
+        //println("\(note.index) : \(note.name)")
         player.play(note)
+    }
+    
+    func hexReleased(row: Int, column: Int) {
+        let note = Note(hexRow: row, column: column)
+        player.release(note)
     }
     
     func hexNameForRow(row: Int, column: Int) -> String {
         let name = Note(hexRow: row, column: column).name
         return "\(name)"
+    }
+    
+    func shouldHoldKeys() -> Bool {
+        return player.currentInstrument.transient == false
     }
     
 }
