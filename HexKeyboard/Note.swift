@@ -51,7 +51,7 @@ struct Note : Printable {
     
     init(hexRow: Int, column: Int) {
         let co = Int(floor(Double(column)/2.0))
-        let note = -hexRow * 7 + co + (column%2)*(-3) + 70
+        let note = -hexRow * 7 + co + abs((column%2))*(-3) + 70
         let transposed = note + Interval.transposeInterval()
         
         self.init(index: transposed)

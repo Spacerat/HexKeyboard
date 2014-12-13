@@ -142,7 +142,7 @@ class HexView: UIView {
         
         self.iterateHexes { (r, c, i, hex) -> () in
             let x = CGFloat(c) * hexWidth*0.75 - offset;
-            let y = CGFloat(r) * hexHeight + CGFloat(c%2)*hexHeight/2.0 - offset;
+            let y = CGFloat(r) * hexHeight + abs(CGFloat(c%2))*hexHeight/2.0 - offset;
             let w = hexWidth + overlap
             let h = hexHeight + overlap
             hex.frame = CGRect(x: x, y: y, width: w, height: h)
