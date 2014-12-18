@@ -66,14 +66,14 @@
 		D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentSelectionViewController.swift; sourceTree = "<group>"; };
 		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
 		D88B13AC19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Hexagon.swift"; sourceTree = "<group>"; };
-		D88FCCE619B53C30006FF205 /* HexKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88FCCE619B53C30006FF205 /* Harmonic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harmonic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FCCEA19B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88FCCEB19B53C30006FF205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88FCCEE19B53C30006FF205 /* HexKeyboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HexKeyboard.xcdatamodel; sourceTree = "<group>"; };
 		D88FCCF019B53C30006FF205 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D88FCCF319B53C30006FF205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D88FCCF519B53C30006FF205 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88FCCFB19B53C30006FF205 /* HarmonicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FCD0019B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardTests.swift; sourceTree = "<group>"; };
 		D88FCD0B19B53DE2006FF205 /* HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexViewController.swift; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 		D88FCCE719B53C30006FF205 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D88FCCE619B53C30006FF205 /* HexKeyboard.app */,
-				D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */,
+				D88FCCE619B53C30006FF205 /* Harmonic.app */,
+				D88FCCFB19B53C30006FF205 /* HarmonicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D88FCCE519B53C30006FF205 /* HexKeyboard */ = {
+		D88FCCE519B53C30006FF205 /* Harmonic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D88FCD0519B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboard" */;
+			buildConfigurationList = D88FCD0519B53C30006FF205 /* Build configuration list for PBXNativeTarget "Harmonic" */;
 			buildPhases = (
 				D88FCCE219B53C30006FF205 /* Sources */,
 				D88FCCE319B53C30006FF205 /* Frameworks */,
@@ -238,14 +238,14 @@
 			);
 			dependencies = (
 			);
-			name = HexKeyboard;
+			name = Harmonic;
 			productName = HexKeyboard;
-			productReference = D88FCCE619B53C30006FF205 /* HexKeyboard.app */;
+			productReference = D88FCCE619B53C30006FF205 /* Harmonic.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D88FCCFA19B53C30006FF205 /* HexKeyboardTests */ = {
+		D88FCCFA19B53C30006FF205 /* HarmonicTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboardTests" */;
+			buildConfigurationList = D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HarmonicTests" */;
 			buildPhases = (
 				D88FCCF719B53C30006FF205 /* Sources */,
 				D88FCCF819B53C30006FF205 /* Frameworks */,
@@ -256,9 +256,9 @@
 			dependencies = (
 				D88FCCFD19B53C30006FF205 /* PBXTargetDependency */,
 			);
-			name = HexKeyboardTests;
+			name = HarmonicTests;
 			productName = HexKeyboardTests;
-			productReference = D88FCCFB19B53C30006FF205 /* HexKeyboardTests.xctest */;
+			productReference = D88FCCFB19B53C30006FF205 /* HarmonicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +280,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D88FCCE119B53C2F006FF205 /* Build configuration list for PBXProject "HexKeyboard" */;
+			buildConfigurationList = D88FCCE119B53C2F006FF205 /* Build configuration list for PBXProject "Harmonic" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -293,8 +293,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D88FCCE519B53C30006FF205 /* HexKeyboard */,
-				D88FCCFA19B53C30006FF205 /* HexKeyboardTests */,
+				D88FCCE519B53C30006FF205 /* Harmonic */,
+				D88FCCFA19B53C30006FF205 /* HarmonicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -368,7 +368,7 @@
 /* Begin PBXTargetDependency section */
 		D88FCCFD19B53C30006FF205 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D88FCCE519B53C30006FF205 /* HexKeyboard */;
+			target = D88FCCE519B53C30006FF205 /* Harmonic */;
 			targetProxy = D88FCCFC19B53C30006FF205 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -472,10 +472,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HexKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Harmonic;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -487,10 +489,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HexKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Harmonic;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -508,8 +512,8 @@
 				);
 				INFOPLIST_FILE = HexKeyboardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexKeyboard.app/HexKeyboard";
+				PRODUCT_NAME = HarmonicTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harmonic.app/Harmonic";
 			};
 			name = Debug;
 		};
@@ -523,15 +527,15 @@
 				);
 				INFOPLIST_FILE = HexKeyboardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexKeyboard.app/HexKeyboard";
+				PRODUCT_NAME = HarmonicTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harmonic.app/Harmonic";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D88FCCE119B53C2F006FF205 /* Build configuration list for PBXProject "HexKeyboard" */ = {
+		D88FCCE119B53C2F006FF205 /* Build configuration list for PBXProject "Harmonic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D88FCD0319B53C30006FF205 /* Debug */,
@@ -540,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D88FCD0519B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboard" */ = {
+		D88FCD0519B53C30006FF205 /* Build configuration list for PBXNativeTarget "Harmonic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D88FCD0619B53C30006FF205 /* Debug */,
@@ -549,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HexKeyboardTests" */ = {
+		D88FCD0819B53C30006FF205 /* Build configuration list for PBXNativeTarget "HarmonicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D88FCD0919B53C30006FF205 /* Debug */,
