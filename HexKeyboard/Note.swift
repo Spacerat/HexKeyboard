@@ -18,7 +18,7 @@ protocol NotePlayer : class {
 }
 
 
-struct Interval : Printable {
+struct Interval : Printable, Comparable {
     let semitones:Int
     
     init(semitones:Int) {
@@ -42,7 +42,7 @@ struct Interval : Printable {
     }
 }
 
-struct Note : Printable {
+struct Note : Printable, Comparable {
     let index:Int
     
     init(index: Int ) {
@@ -75,7 +75,12 @@ struct Note : Printable {
     }
 }
 
+func == (left:Note, right:Note) -> Bool { return left.index == right.index}
+func < (left: Note, right:Note) -> Bool { return left.index < right.index}
+
 func == (left:Interval, right:Interval) -> Bool {return left.semitones == right.semitones}
-func != (left:Interval, right:Interval) -> Bool {return !(left == right)}
+func < (left:Interval, right:Interval) -> Bool { return left.semitones < right.semitones}
+
 func + (left:Note, right:Interval) -> Note { return Note(index: left.index+right.semitones)}
+func - (left:Note, right:Interval) -> Note { return Note(index: left.index-right.semitones)}
 func + (left:Int, right:Interval) -> Int {return right.semitones + left}

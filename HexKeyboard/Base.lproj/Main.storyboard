@@ -46,14 +46,14 @@
                                 <exclude reference="Kre-gG-d51"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4IW-bV-lgF"/>
+                                <exclude reference="zYX-Zb-gg5"/>
                                 <exclude reference="9WL-j9-g7J"/>
                                 <exclude reference="Ii2-DM-l4R"/>
                                 <exclude reference="Vti-Ae-Nf6"/>
                                 <exclude reference="bvS-Em-sL4"/>
                                 <exclude reference="hen-Bi-KhF"/>
                                 <exclude reference="r9l-8C-9oN"/>
-                                <exclude reference="4IW-bV-lgF"/>
-                                <exclude reference="zYX-Zb-gg5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -61,10 +61,10 @@
                                 <include reference="xS0-af-HL7"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4IW-bV-lgF"/>
                                 <include reference="bvS-Em-sL4"/>
                                 <include reference="hen-Bi-KhF"/>
                                 <include reference="r9l-8C-9oN"/>
-                                <include reference="4IW-bV-lgF"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -72,10 +72,10 @@
                                 <include reference="Kre-gG-d51"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="zYX-Zb-gg5"/>
                                 <include reference="9WL-j9-g7J"/>
                                 <include reference="Ii2-DM-l4R"/>
                                 <include reference="Vti-Ae-Nf6"/>
-                                <include reference="zYX-Zb-gg5"/>
                             </mask>
                         </variation>
                     </view>

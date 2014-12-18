@@ -12,6 +12,11 @@
 		D8194CC219C646CD009F2499 /* Swell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D8194CC119C646CD009F2499 /* Swell.m4a */; };
 		D838384319B68CBE003D1559 /* Bell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D838383C19B68CBE003D1559 /* Bell.m4a */; };
 		D84B45FD1A3C6FDB001E5233 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B45FC1A3C6FDB001E5233 /* MainViewController.swift */; };
+		D84B45FF1A3C7BA1001E5233 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B45FE1A3C7BA1001E5233 /* NoteTests.swift */; };
+		D84B46011A3C7C7C001E5233 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B46001A3C7C7C001E5233 /* Note.swift */; };
+		D84B46021A3C7C7C001E5233 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B46001A3C7C7C001E5233 /* Note.swift */; };
+		D84B46031A3C7CD0001E5233 /* Instruments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6D6219C5F3770063F0BE /* Instruments.swift */; };
+		D84B46041A3C7CE2001E5233 /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8839019B7E0CB00A8EC6D /* MIDISampler.swift */; };
 		D84F43EF19C5C4720081E3D1 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84F43EE19C5C4720081E3D1 /* defaults.plist */; };
 		D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */; };
 		D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */; };
@@ -23,7 +28,6 @@
 		D88FCCF619B53C30006FF205 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88FCCF519B53C30006FF205 /* Images.xcassets */; };
 		D88FCD0219B53C30006FF205 /* HexKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */; };
 		D88FCD0C19B53DE2006FF205 /* HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0B19B53DE2006FF205 /* HexViewController.swift */; };
-		D88FCD0E19B54338006FF205 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0D19B54338006FF205 /* Note.swift */; };
 		D88FCD1019B5502D006FF205 /* HexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FCD0F19B5502D006FF205 /* HexView.swift */; };
 		D8DD6D6319C5F3770063F0BE /* Instruments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD6D6219C5F3770063F0BE /* Instruments.swift */; };
 		D8DEA98A19B6205E00CF8FCE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */; };
@@ -56,6 +60,8 @@
 		D838383C19B68CBE003D1559 /* Bell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bell.m4a; path = HexKeyboard/Bell.m4a; sourceTree = "<group>"; };
 		D83E80CC19DB808200450F6A /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		D84B45FC1A3C6FDB001E5233 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D84B45FE1A3C7BA1001E5233 /* NoteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
+		D84B46001A3C7C7C001E5233 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D84F43EE19C5C4720081E3D1 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaults.plist; path = HexKeyboard/defaults.plist; sourceTree = "<group>"; };
 		D84F43F019C5D86D0081E3D1 /* InstrumentSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentSelectionViewController.swift; sourceTree = "<group>"; };
 		D8506B6219C5B21900CCE51B /* SemitonesPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemitonesPickerViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +77,6 @@
 		D88FCD0019B53C30006FF205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKeyboardTests.swift; sourceTree = "<group>"; };
 		D88FCD0B19B53DE2006FF205 /* HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexViewController.swift; sourceTree = "<group>"; };
-		D88FCD0D19B54338006FF205 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D88FCD0F19B5502D006FF205 /* HexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexView.swift; sourceTree = "<group>"; };
 		D8DD6D6219C5F3770063F0BE /* Instruments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruments.swift; sourceTree = "<group>"; };
 		D8DEA98719B6205E00CF8FCE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -181,6 +186,7 @@
 			children = (
 				D88FCD0119B53C30006FF205 /* HexKeyboardTests.swift */,
 				D88FCCFF19B53C30006FF205 /* Supporting Files */,
+				D84B45FE1A3C7BA1001E5233 /* NoteTests.swift */,
 			);
 			path = HexKeyboardTests;
 			sourceTree = "<group>";
@@ -206,8 +212,8 @@
 		D8BC7FE819C5DA00003E62D0 /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
+				D84B46001A3C7C7C001E5233 /* Note.swift */,
 				D88FCD0B19B53DE2006FF205 /* HexViewController.swift */,
-				D88FCD0D19B54338006FF205 /* Note.swift */,
 				D8ECE68819B5E8EE00BEB576 /* HexKey.swift */,
 				D88FCD0F19B5502D006FF205 /* HexView.swift */,
 				D8DEA98D19B6236800CF8FCE /* Synth.swift */,
@@ -334,10 +340,10 @@
 				D88B13AD19CC471200D6BDD8 /* UIBezierPath+Hexagon.swift in Sources */,
 				D8E74F0919BB629D003F2792 /* SettingsViewController.swift in Sources */,
 				D84F43F119C5D86D0081E3D1 /* InstrumentSelectionViewController.swift in Sources */,
-				D88FCD0E19B54338006FF205 /* Note.swift in Sources */,
 				D88FCCEF19B53C30006FF205 /* HexKeyboard.xcdatamodeld in Sources */,
 				D84B45FD1A3C6FDB001E5233 /* MainViewController.swift in Sources */,
 				D8DEA98E19B6236800CF8FCE /* Synth.swift in Sources */,
+				D84B46011A3C7C7C001E5233 /* Note.swift in Sources */,
 				D8ECE68919B5E8EE00BEB576 /* HexKey.swift in Sources */,
 				D88FCD0C19B53DE2006FF205 /* HexViewController.swift in Sources */,
 				D8506B6319C5B21900CCE51B /* SemitonesPickerViewController.swift in Sources */,
@@ -349,7 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84B46031A3C7CD0001E5233 /* Instruments.swift in Sources */,
 				D88FCD0219B53C30006FF205 /* HexKeyboardTests.swift in Sources */,
+				D84B46041A3C7CE2001E5233 /* MIDISampler.swift in Sources */,
+				D84B45FF1A3C7BA1001E5233 /* NoteTests.swift in Sources */,
+				D84B46021A3C7C7C001E5233 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
